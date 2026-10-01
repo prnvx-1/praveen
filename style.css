@@ -1,0 +1,143 @@
+:root {
+    --text-color: #333;
+    --border-color: #ccc;
+    --bg-color: #fff;
+    --btn-bg: #eee;
+    --btn-hover: #e0e0e0;
+    --link-color: #0066cc;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--btn-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+.results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-card {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.book-card:last-child {
+    border-bottom: none;
+}
+
+.book-cover {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.book-desc {
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.book-link:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#loading, #error-message {
+    padding: 20px 0;
+    color: #666;
+}
+
+#error-message {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .book-card {
+        flex-direction: column;
+    }
+    .book-cover {
+        width: 120px;
+        height: 180px;
+    }
+}

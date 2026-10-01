@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book Search</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search books..." />
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <div id="loading" class="hidden">Searching...</div>
+        <div id="error-message" class="hidden"></div>
+        <main id="results" class="results-grid"></main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
